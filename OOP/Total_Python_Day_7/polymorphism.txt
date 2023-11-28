@@ -1,0 +1,11 @@
+Tính chất đa hình trong lập trình là
+khả năng của một đối tượng có thể được xử lý bằng nhiều cách khác nhau
+ dựa trên kiểu dữ liệu của nó hoặc giao diện mà nó thực hiện.
+  Điều này có nghĩa là cùng một hành động có thể có ứng xử khác nhau tùy thuộc vào loại đối tượng mà nó đang tác động.
+
+Trong ngôn ngữ lập trình Python, đa hình được thực hiện thông qua việc sử dụng các phương thức và hàm
+mà có thể hoạt động trên nhiều loại đối tượng khác nhau mà không cần biết chi tiết về kiểu cụ thể của đối tượng đó.
+
+Ví dụ, hàm `len()` trong Python có thể được sử dụng để lấy độ dài của chuỗi, danh sách, tuple, và nhiều loại đối tượng khác mà hỗ trợ phương thức `__len__`.
+
+Tính chất đa hình giúp tăng tính linh hoạt và tái sử dụng trong mã nguồn, vì bạn có thể viết mã mà không cần biết trước loại cụ thể của đối tượng mà mã đó sẽ tương tác. Điều này thường đi kèm với các khái niệm khác như kế thừa và giao diện trong hệ thống hướng đối tượng.

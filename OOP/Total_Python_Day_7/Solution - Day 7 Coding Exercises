@@ -1,0 +1,228 @@
+Solution - Day 7 Coding Exercises
+Before moving on to today's Challenge, let me share with you the possible solutions for each of the exercises from today, in case you have had any difficulty finishing them.
+
+Note that these solutions are not unique! If you have arrived at a code that returns a correct result in PyCharm or your favorite code editor, I want you to know that you have done a good job (not all possible cases can always be considered when evaluating a task).
+
+Classes Practice #1
+
+class Character:
+    pass
+harry_potter = Character()
+Classes Practice #2
+
+class Dinosaur:
+    pass
+velociraptor = Dinosaur()
+tyrannosaurus_rex = Dinosaur()
+brachiosaurus = Dinosaur()
+Classes Practice #3
+
+class StreamingPlatform:
+    pass
+netflix = StreamingPlatform()
+hbo_max = StreamingPlatform()
+amazon_prime_video = StreamingPlatform()
+Attributes Practice #1
+
+class House:
+    def __init__(self, color, floors):
+        self.color = color
+        self.floors = floors
+white_house = House("white", 4)
+Attributes Practice #2
+
+class Cube:
+    sides = 6
+    def __init__(self,color):
+        self.color = color
+red_cube = Cube("red")
+Attributes Practice #3
+
+class Character:
+    real = False
+    def __init__(self, species, magical, age):
+        self.species = species
+        self.magical = magical
+        self.age = age
+harry_potter = Character("human", True, 17)
+Methods Practice #1
+
+class Dog:
+    def bark(self):
+        print("Woof!")
+pluto = Dog()
+pluto.bark()
+Methods Practice #2
+
+class Wizard:
+    def cast_spell(self):
+        print("Abracadabra!")
+merlin = Wizard()
+merlin.cast_spell()
+Methods Practice #3
+
+class Alarm:
+    def snooze(self,minutes):
+        print(f"The alarm has been postponed {minutes} minutes")
+Types of Methods Practice #1
+
+class Pet:
+    @staticmethod
+    def breathe():
+        print("Inhale... Exhale")
+Types of Methods Practice #2
+
+class Player:
+    alive = False
+    @classmethod
+    def revive(cls):
+        cls.alive = True
+Types of Methods Practice #3
+
+class Character:
+    def __init__(self, arrows_amount):
+        self.arrows_amount = arrows_amount
+    def throw_arrow(self):
+        self.arrows_amount = self.arrows_amount-1
+Inheritance Practice #1
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+class Student(Person):
+    pass
+Inheritance Practice #2
+
+class Pet:
+    def __init__(self, age, name, legs):
+        self.age = age
+        self.name = name
+        self.legs = legs
+class Dog(Pet):
+    pass
+champion = Dog(6,"Champion",4)
+Inheritance Practice #3
+
+class Vehicle:
+    def speed(self):
+        pass
+    def slow_down(self):
+        pass
+class Car(Vehicle):
+    pass
+Extended Inheritance Practice #1
+
+class Father():
+    def work(self):
+        print("Working in the Public Hospital")
+    def laugh(self):
+        print("Ha Ha Ha!")
+class Mother():
+    def work(self):
+        print("Working in the Public Prosecutor's Office")
+class Daughter(Mother, Father):
+    pass
+Extended Inheritance Practice #2
+
+class Vertebrate:
+    vertebrate = True
+class Bird(Vertebrate):
+    has_peak = True
+    def lay_eggs(self):
+        print("laying eggs")
+class Reptile(Vertebrate):
+    poisonous = True
+class Fish(Vertebrate):
+    def swim(self):
+        print("swimming")
+    def lay_eggs(self):
+        print("laying eggs")
+class Mammal(Vertebrate):
+    def walk(self):
+        print("walking")
+    def nurse(self):
+        print("nursing pups")
+class Platypus(Mammal, Fish, Reptile, Bird):
+    pass
+Extended Inheritance Practice #3
+
+class Father():
+    eye_color = "brown"
+    hair = "curly"
+    height = "average"
+    voice = "deep"
+    favorite_sport = "tennis"
+    def laugh(self):
+        return "LOL"
+    def hobby(self):
+        return "I work with wood in my free time"
+    def walk(self):
+        return "Walking with long and quick steps"
+class Child(Father):
+    def hobby(self):
+        return "I play video games in my free time"
+Polymorphism Practice #1
+
+a_word = "polymorphism"
+a_list = ["Classes", "OOP", "Polymorphism"]
+a_tuple = (1, 2, 3, 80)
+for obj in [a_word, a_list, a_tuple]:
+    print(len(obj))
+Polymorphism Practice #2
+
+class Wizard():
+    def attack(self):
+        print("magic attack")
+class Archer():
+    def attack(self):
+        print("shoot arrow")
+class Samurai():
+    def attack(self):
+        print("katana attack")
+gandalf = Wizard()
+hawkeye = Archer()
+jack = Samurai()
+characters = [hawkeye, gandalf, jack]
+for char in characters:
+    char.attack()
+Polymorphism Practice #3
+
+class Wizard():
+    def defend(self):
+        print("magic shield")
+class Archer():
+    def defend(self):
+        print("duck")
+class Samurai():
+    def defend(self):
+        print("block")
+def general_defense(character):
+    character.defend()
+Special Methods Practice #1
+
+class Book():
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    def __str__(self):
+        return f'"{self.title}", from {self.author}'
+Special Methods Practice #2
+
+class Book():
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    def __len__(self):
+        return self.pages
+Special Methods Practice #3
+
+class Book():
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    def __del__(self):
+        print(f'Book deleted')

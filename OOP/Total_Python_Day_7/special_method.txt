@@ -1,0 +1,32 @@
+Trong đoạn mã bạn đã cung cấp, bạn đang định nghĩa một lớp `Book` để biểu diễn thông tin về một cuốn sách. Dưới đây là tóm tắt:
+
+1. **Phương thức `__init__`:**
+   - Khởi tạo một đối tượng sách với các thuộc tính cơ bản như `title` (tiêu đề), `author` (tác giả), và `pages` (số trang).
+   - Gán giá trị của các tham số cho các thuộc tính tương ứng của đối tượng.
+
+2. **Phương thức `__str__`:**
+   - Đặc biệt về chuỗi, trả về một chuỗi mô tả sách, bao gồm tiêu đề và tác giả.
+
+3. **Phương thức `__len__`:**
+   - Đặc biệt về độ dài, trả về số trang của sách khi sử dụng hàm `len()`.
+
+4. **Phương thức `__del__`:**
+   - Đặc biệt về xóa, in một thông báo "Book deleted" khi đối tượng sách bị xóa.
+
+Ví dụ sử dụng:
+
+```python
+# Tạo một đối tượng Book
+my_book = Book("The Python Book", "John Doe", 300)
+
+# In thông tin sách
+print(my_book)  # Output: "The Python Book", from John Doe
+
+# In độ dài của sách
+print(len(my_book))  # Output: 300
+
+# Xóa đối tượng sách
+del my_book  # Khi xóa, in ra "Book deleted"
+```
+
+Lưu ý rằng các phương thức đặc biệt này cung cấp tính linh hoạt và tiện ích khi làm việc với đối tượng của lớp `Book`.

@@ -1,0 +1,96 @@
+Dưới đây là giải thích về các loại kế thừa trong từng ví dụ:
+
+### Inheritance Practice #1
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+class Student(Person):
+    pass
+```
+- **Giải thích:** `Student` kế thừa từ `Person`. Nghĩa là mọi thuộc tính và phương thức của `Person` đều được `Student` thừa hưởng. `Student` có tất cả những gì `Person` có (tên và tuổi) mà không cần phải triển khai lại.
+
+### Inheritance Practice #2
+```python
+class Pet:
+    def __init__(self, age, name, legs):
+        self.age = age
+        self.name = name
+        self.legs = legs
+class Dog(Pet):
+    pass
+```
+- **Giải thích:** `Dog` kế thừa từ `Pet`. Điều này có nghĩa là mọi thuộc tính và phương thức của `Pet` được `Dog` thừa hưởng. `Dog` có các thuộc tính `age`, `name`, và `legs` mà không cần triển khai lại.
+
+### Inheritance Practice #3
+```python
+class Vehicle:
+    def speed(self):
+        pass
+    def slow_down(self):
+        pass
+class Car(Vehicle):
+    pass
+```
+- **Giải thích:** `Car` kế thừa từ `Vehicle`. `Car` có tất cả các phương thức của `Vehicle` như `speed` và `slow_down` mà không cần phải triển khai lại.
+
+### Extended Inheritance Practice #1
+```python
+class Father():
+    def work(self):
+        print("Working in the Public Hospital")
+    def laugh(self):
+        print("Ha Ha Ha!")
+class Mother():
+    def work(self):
+        print("Working in the Public Prosecutor's Office")
+class Daughter(Mother, Father):
+    pass
+```
+- **Giải thích:** `Daughter` kế thừa từ cả `Mother` và `Father`. Điều này có nghĩa là `Daughter` có thể sử dụng cả hai lớp `Mother` và `Father` và kế thừa cả phương thức `work` từ cả hai.
+
+### Extended Inheritance Practice #2
+```python
+class Vertebrate:
+    vertebrate = True
+class Bird(Vertebrate):
+    has_peak = True
+    def lay_eggs(self):
+        print("laying eggs")
+class Reptile(Vertebrate):
+    poisonous = True
+class Fish(Vertebrate):
+    def swim(self):
+        print("swimming")
+    def lay_eggs(self):
+        print("laying eggs")
+class Mammal(Vertebrate):
+    def walk(self):
+        print("walking")
+    def nurse(self):
+        print("nursing pups")
+class Platypus(Mammal, Fish, Reptile, Bird):
+    pass
+```
+- **Giải thích:** `Platypus` kế thừa từ nhiều lớp (`Mammal`, `Fish`, `Reptile`, `Bird`). Điều này cho phép `Platypus` sử dụng thuộc tính và phương thức từ tất cả các lớp cha của nó.
+
+### Extended Inheritance Practice #3
+```python
+class Father():
+    eye_color = "brown"
+    hair = "curly"
+    height = "average"
+    voice = "deep"
+    favorite_sport = "tennis"
+    def laugh(self):
+        return "LOL"
+    def hobby(self):
+        return "I work with wood in my free time"
+    def walk(self):
+        return "Walking with long and quick steps"
+class Child(Father):
+    def hobby(self):
+        return "I play video games in my free time"
+```
+- **Giải thích:** `Child` kế thừa từ `Father`. `Child` có thể sử dụng tất cả các thuộc tính và phương thức của `Father`. Đồng thời, `Child` có thể ghi đè (override) phương thức `hobby` để có một hành vi khác biệt.
